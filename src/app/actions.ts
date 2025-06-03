@@ -1,33 +1,32 @@
+
 'use server';
 
 import { z } from 'zod';
-import { extractColorScheme as aiExtractColorScheme } from '@/ai/flows/extract-color-scheme';
+import { generateThemeColors as aiGenerateThemeColors, type GenerateThemeColorsOutput } from '@/ai/flows/generate-theme-colors';
 
-// Schema for Style Guide Tool input
-const ExtractColorSchemeInputSchema = z.object({
-  websiteUrl: z.string().url(),
+// Schema for Theme Customizer input
+const GenerateThemeInputSchema = z.object({
+  primaryColor: z.string().regex(/^#[0-9A-Fa-f]{6}$/, { message: 'Invalid HEX color format. Please use #RRGGBB.' }),
 });
 
-export async function extractWebsiteColorScheme(
-  input: z.infer<typeof ExtractColorSchemeInputSchema>
-): Promise<{ colorScheme?: string[]; error?: string }> {
-  const validatedInput = ExtractColorSchemeInputSchema.safeParse(input);
+export async function generateThemeFromColor(
+  input: z.infer<typeof GenerateThemeInputSchema>
+): Promise<{ themeColors?: GenerateThemeColorsOutput; error?: string }> {
+  const validatedInput = GenerateThemeInputSchema.safeParse(input);
   if (!validatedInput.success) {
-    return { error: 'Invalid URL provided.' };
+    return { error: validatedInput.error.errors.map(e => e.message).join(', ') };
   }
 
   try {
-    const result = await aiExtractColorScheme({ websiteUrl: validatedInput.data.websiteUrl });
-    return { colorScheme: result.colorScheme };
+    const result = await aiGenerateThemeColors({ primaryColor: validatedInput.data.primaryColor });
+    return { themeColors: result };
   } catch (error: any) {
-    console.error('Error extracting color scheme:', error);
-    // Check if the error object has a message property
-    let errorMessage = 'Failed to extract color scheme due to an AI processing error.';
+    console.error('Error generating theme colors:', error);
+    let errorMessage = 'Failed to generate theme due to an AI processing error.';
     if (error && typeof error.message === 'string') {
       errorMessage = error.message;
     }
-    // More specific error handling based on error structure from Genkit if available
-    if (error && error.details) {
+    if (error && error.details) { // Genkit specific error
        errorMessage = `AI Error: ${error.details}`;
     }
     return { error: errorMessage };
@@ -60,7 +59,7 @@ export async function submitContactForm(
 
     return { success: true };
   } catch (error) {
-    console.error('Error submitting contact form:', error);
+    console.error('Error submitting contactForm:', error);
     return { success: false, error: 'Failed to submit form. Please try again later.' };
   }
 }

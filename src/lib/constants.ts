@@ -1,5 +1,6 @@
+
 import type { Project, Service, Skill, PricingPlan } from './types';
-import { Smartphone, Monitor, Palette, Codepen, Layers, Zap, ShoppingCart, Users, Server, Brain, Bot, DollarSign, CheckCircle, ShieldCheck, GitBranch, Figma, Settings, BarChart, Database, Code } from 'lucide-react';
+import { Smartphone, Monitor, Palette, Codepen, Layers, Zap, ShoppingCart, Users, Server, Brain, Bot, DollarSign, CheckCircle, ShieldCheck, GitBranch, Figma, Settings, BarChart, Database, Code, Sparkles } from 'lucide-react';
 
 export const APP_NAME = "ShiwaniTiwari.Dev";
 
@@ -8,7 +9,7 @@ export const NAV_LINKS = [
   { href: '#services', label: 'Services' },
   { href: '#skills', label: 'Skills' },
   { href: '#pricing', label: 'Pricing' },
-  { href: '#style-tool', label: 'Style Tool' },
+  { href: '#theme-customizer', label: 'Theme AI' },
   { href: '#contact', label: 'Contact' },
 ];
 

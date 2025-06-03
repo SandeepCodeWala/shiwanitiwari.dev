@@ -1,4 +1,5 @@
+
 import { config } from 'dotenv';
 config();
 
-import '@/ai/flows/extract-color-scheme.ts';
+import '@/ai/flows/generate-theme-colors.ts';
