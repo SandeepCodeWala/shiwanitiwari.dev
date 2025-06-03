@@ -16,32 +16,54 @@ export const NAV_LINKS = [
 export const PROJECTS_DATA: Project[] = [
   {
     id: '1',
-    title: 'E-commerce Platform',
-    description: 'A full-stack e-commerce platform with features like product listing, cart, checkout, and user authentication.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    title: 'GlamCode- Luxury Home Salon',
+    description: 'Glam Code is an Upscale Fully-Equipped Home Salon Services start-up, initiated by a mother and daughter-in-law duo.',
+    imageUrl: 'https://sandyrn.netlify.app/images/glam.png',
     imageHint: 'online store',
-    tags: ['React', 'NodeJS', 'MongoDB', 'Stripe'],
-    liveUrl: '#',
-    codeUrl: '#',
+    tags: ['Website','Mobile Application','React', 'NodeJS', 'MongoDB', 'React Native'],
+    liveUrl: 'https://www.glamcode.in/',
+    codeUrl: 'https://apps.apple.com/in/app/glamcode/id6449648391',
   },
   {
     id: '2',
-    title: 'Social Media App',
-    description: 'A mobile-first social media application for sharing updates and connecting with friends.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    title: 'JSQuestion: AI Interviews',
+    description: 'Interview Questions, Videos, Quizzess, User Post and many more are available on JSQuestion app.',
+    imageUrl: 'https://play-lh.googleusercontent.com/3LBZdzR7N5OLvMTReQS4puVdP_hq9-WGeGT7huP4RqdiZaasnD_i6AX990TIjwfXPctd=w480-h960-rw',
     imageHint: 'social network',
     tags: ['React Native', 'Firebase', 'iOS', 'Android'],
-    liveUrl: '#',
+    liveUrl: 'https://play.google.com/store/apps/details?id=com.jsquestion',
   },
   {
-    id: '3',
-    title: 'Project Management Tool',
-    description: 'A web application to help teams manage projects, tasks, and deadlines efficiently.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'team collaboration',
-    tags: ['React', 'Redux', 'NodeJS', 'PostgreSQL'],
-    codeUrl: '#',
+    id: '4',
+    title: 'SeaPeople: Boat, Fish, Paddle',
+    description: 'SeaPeople makes GPS boat tracking social. We house your entire marine journey in one spot  whether you are sailing, boating, or on a yacht, and you get to share it with your social network. Enhance your real-world moments & social connections while growing your network of friends around the world. All water connects; we are all sea people.',
+    imageUrl: 'https://sandyrn.netlify.app/images/sea.png',
+    imageHint: 'Team collaboration',
+    tags: ['React Native', 'Firebase', 'Redux', 'NodeJS','MongoDB'],
+    codeUrl: 'https://seapeopleapp.com/',
+    liveUrl:'https://apps.apple.com/us/app/seapeople-boat-fish-paddle/id6447652420'
   },
+  {
+    id: '5',
+    title: 'Ittzy',
+    description: 'Ittzy - Stay Informed, Stay Connected Discover whats happening in your city, explore local trends, and share your stories. Local Marketplace: Ittzy also serves as a marketplace for promoting local businesses. Post offers or browse deals in your city across various categories based on your location.',
+    imageUrl: 'https://play-lh.googleusercontent.com/ZR75OHUv2NSVhCERXBZLtilbPePuK4TKPVvRhL_XWi6CJiggzCNoERUiumNe3b0wtAU=w480-h960-rw',
+    imageHint: 'Team collaboration',
+    tags: ['React Native', 'Firebase', 'Redux', 'NodeJS','MongoDB','PHP'],
+    codeUrl: 'https://ittzy.com/',
+    liveUrl:'https://play.google.com/store/apps/details?id=com.ittzyapp.app'
+  },
+  {
+    id: '6',
+    title: 'ThressJS Demo',
+    description: 'A web application to help teams manage projects, tasks, and deadlines efficiently.',
+    imageUrl: 'https://sandyrn.netlify.app/images/hero.svg',
+    imageHint: 'Team collaboration',
+    tags: ['React', 'ThreeJS', 'Redux'],
+    codeUrl: 'https://sandeepcodewala.netlify.app/',
+    liveUrl:'https://sandeepcodewala.netlify.app/'
+  },
+  
 ];
 
 export const SERVICES_DATA: Service[] = [
@@ -105,7 +127,7 @@ export const PRICING_PLANS_DATA: PricingPlan[] = [
   {
     id: 'p1',
     name: 'Basic Website',
-    price: '$500',
+    price: '$149',
     frequency: 'one-time',
     features: ['Up to 5 Pages', 'Responsive Design', 'Contact Form', 'Basic SEO Setup'],
     ctaText: 'Get Started',
@@ -113,7 +135,7 @@ export const PRICING_PLANS_DATA: PricingPlan[] = [
   {
     id: 'p2',
     name: 'Mobile App (MVP)',
-    price: '$2500',
+    price: '$499',
     frequency: 'one-time',
     features: ['iOS & Android (React Native)', 'Up to 5 Screens', 'Basic Backend Setup', 'App Store Submission Help'],
     isPopular: true,
@@ -130,7 +152,7 @@ export const PRICING_PLANS_DATA: PricingPlan[] = [
    {
     id: 'p4',
     name: 'Hourly Consultation',
-    price: '$75',
+    price: '$10',
     frequency: 'per hour',
     features: ['Technical Advice', 'Code Review', 'Problem Solving', 'Architecture Planning'],
     ctaText: 'Book Session',
@@ -138,7 +160,7 @@ export const PRICING_PLANS_DATA: PricingPlan[] = [
 ];
 
 export const SOCIAL_LINKS = [
-  { name: 'GitHub', url: 'https://github.com', icon: GitBranch },
-  { name: 'LinkedIn', url: 'https://linkedin.com', icon: Users },
+  { name: 'GitHub', url: 'https://github.com/SandeepCodeWala', icon: GitBranch },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/shiwani-tiwari-7b4757192/', icon: Users },
   // Add more social links here
 ];

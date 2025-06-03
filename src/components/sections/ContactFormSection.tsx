@@ -86,18 +86,9 @@ export function ContactFormSection() {
                     Connect on LinkedIn
                 </Link>
             </div>
-            <p>Based in: Your City, Your Country</p>
+            <p>Based in: Noida, India</p>
           </div>
-           <div className="mt-8">
-             <Image 
-                src="https://placehold.co/500x350.png" 
-                alt="Shiwani Tiwari - Get in Touch" 
-                width={500} 
-                height={350} 
-                className="rounded-lg shadow-lg"
-                data-ai-hint="communication abstract"
-              />
-           </div>
+          
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 p-6 md:p-8 bg-card rounded-lg shadow-xl animate-slide-in" style={{ animationDelay: '0.4s' }}>
