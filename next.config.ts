@@ -1,3 +1,4 @@
+
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
@@ -16,6 +17,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+    ],
+  },
+  experimental: {
+    serverComponentsExternalPackages: [
+      '@opentelemetry/sdk-node',
+      '@opentelemetry/sdk-trace-node',
     ],
   },
 };
