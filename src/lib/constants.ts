@@ -49,7 +49,7 @@ export const PROJECTS_DATA: Project[] = [
     description: 'Ittzy - Stay Informed, Stay Connected Discover whats happening in your city, explore local trends, and share your stories. Local Marketplace: Ittzy also serves as a marketplace for promoting local businesses. Post offers or browse deals in your city across various categories based on your location.',
     imageUrl: 'https://play-lh.googleusercontent.com/ZR75OHUv2NSVhCERXBZLtilbPePuK4TKPVvRhL_XWi6CJiggzCNoERUiumNe3b0wtAU=w480-h960-rw',
     imageHint: 'Team collaboration',
-    tags: ['React Native', 'Firebase', 'Redux', 'NodeJS','MongoDB','PHP'],
+    tags: ['Website','Mobile Application','React Native', 'Firebase', 'Redux', 'NodeJS','MongoDB','PHP'],
     codeUrl: 'https://ittzy.com/',
     liveUrl:'https://play.google.com/store/apps/details?id=com.ittzyapp.app'
   },
@@ -61,7 +61,7 @@ export const PROJECTS_DATA: Project[] = [
     imageHint: 'Team collaboration',
     tags: ['React', 'ThreeJS', 'Redux'],
     codeUrl: 'https://sandeepcodewala.netlify.app/',
-    liveUrl:'https://sandeepcodewala.netlify.app/'
+    
   },
   
 ];

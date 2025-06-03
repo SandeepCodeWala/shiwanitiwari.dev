@@ -13,8 +13,8 @@ interface ProjectCardProps {
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Card className="overflow-hidden h-full flex flex-col transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-      <CardHeader className="p-0">
-        <div className="relative w-56 h-48 md:h-56">
+      <CardHeader className="p-0 flex justify-center items-center">
+        <div className="relative w-56 h-48 md:h-56 ">
           <Image
             src={project.imageUrl}
             alt={project.title}
@@ -38,14 +38,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
         {project.liveUrl && (
           <Button asChild variant="outline" className="flex-1 border-accent text-accent hover:bg-accent/10">
             <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+              <ExternalLink className="mr-2 h-4 w-4" /> App Live Demo
             </Link>
           </Button>
         )}
         {project.codeUrl && (
           <Button asChild variant="outline" className="flex-1">
             <Link href={project.codeUrl} target="_blank" rel="noopener noreferrer">
-              <Github className="mr-2 h-4 w-4" /> View Code
+              <Github className="mr-2 h-4 w-4" /> View Website
             </Link>
           </Button>
         )}
