@@ -11,8 +11,9 @@ import { SectionWrapper } from '@/components/shared/SectionWrapper';
 import { submitContactForm } from '@/app/actions';
 import { useToast } from '@/hooks/use-toast';
 import { useState } from 'react';
-import { Loader2, Send, AlertTriangle } from 'lucide-react';
+import { Loader2, Send, AlertTriangle, Linkedin } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -77,14 +78,20 @@ export function ContactFormSection() {
           <p className="text-muted-foreground mb-6">
             I&apos;m always excited to discuss new projects, creative ideas, or opportunities to be part of something amazing. Feel free to reach out!
           </p>
-          <div className="space-y-3 text-muted-foreground">
-            <p>Email: <a href="mailto:contact@shiwani.dev" className="text-primary hover:underline">contact@shiwani.dev</a></p>
+          <div className="space-y-3 text-muted-foreground mb-6">
+            <p>Email: <a href="mailto:sandyrnjs@gmail.com" className="text-primary hover:underline">sandyrnjs@gmail.com</a></p>
+            <div className="flex items-center gap-2">
+                <Linkedin className="h-5 w-5 text-primary" />
+                <Link href="https://www.linkedin.com/in/shiwani-tiwari-7b4757192/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    Connect on LinkedIn
+                </Link>
+            </div>
             <p>Based in: Your City, Your Country</p>
           </div>
-           <div className="mt-8 hidden md:block">
+           <div className="mt-8">
              <Image 
                 src="https://placehold.co/500x350.png" 
-                alt="Contact illustration" 
+                alt="Shiwani Tiwari - Get in Touch" 
                 width={500} 
                 height={350} 
                 className="rounded-lg shadow-lg"

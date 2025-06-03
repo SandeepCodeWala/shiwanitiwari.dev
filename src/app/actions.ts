@@ -50,11 +50,19 @@ export async function submitContactForm(
   }
 
   try {
-    // In a real application, you would send an email or save to a database here.
-    // For this example, we'll just log the data.
-    console.log('Contact form submitted:', validatedData.data);
+    // Simulate sending an email.
+    // In a real application, you would integrate an email service (e.g., SendGrid, Resend, Nodemailer) here.
+    console.log('Contact form submitted. Data:', validatedData.data);
+    console.log(`Simulating email dispatch to sandyrnjs@gmail.com`);
+    console.log(`Email Subject: New Contact Form Submission - ${validatedData.data.subject || 'No Subject'}`);
+    console.log(`Email Body:
+      Name: ${validatedData.data.name}
+      Email: ${validatedData.data.email}
+      Subject: ${validatedData.data.subject || 'N/A'}
+      Message: ${validatedData.data.message}
+    `);
     
-    // Simulate an API call
+    // Simulate an API call or email sending delay
     await new Promise(resolve => setTimeout(resolve, 1000));
 
     return { success: true };
